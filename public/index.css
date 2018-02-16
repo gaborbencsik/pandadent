@@ -7,6 +7,10 @@ header {
   z-index: 100;
 }
 
+p {
+  text-align: justify;
+}
+
 .nav {
   display: flex;
   justify-content: space-around;
@@ -23,7 +27,7 @@ header {
   align-items: center;
 }
 
-.profile_image {
+.profile-image {
   width: 300px;
   height: 300px;
 }
@@ -33,4 +37,27 @@ footer {
   left:0px;
   bottom:0px;
   width:100%;
+}
+
+.hero {
+
+}
+
+@media (max-width: 767px) {
+  /* main {
+    font-size: .7rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  } */
+
+  .hero {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
 }
