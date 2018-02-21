@@ -18,31 +18,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 app.use(express.static('public/lib'))
+app.use(express.static('public/assets'))
 
 app.engine('hbs', engines.handlebars);
 app.set('views', './public');
 app.set('view engine', 'hbs');
 
 app.get('/', (req, res) => {
-  console.log('app');
-  let data;
-
   gsjson({
     spreadsheetId: key,
     hash: 'field',
     worksheet: ['Content', 'Images']
-
   })
   .then(function(result) {
-    console.log(result);
     res.render('index', {data: result[0], images: result[1]});
   })
   .catch(function(err) {
     console.log(err.message);
+    // res.render('error')
   });
-
-  // res.render('index', data);
-  // res.render('index', {title: 'Pandadent'})
 })
 
 const server = app.listen(process.env.PORT || 4515, function() {

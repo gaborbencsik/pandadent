@@ -4,6 +4,8 @@ html {
 
 header {
   position: fixed;
+  width: 100%;
+  /* position: relative; */
   z-index: 100;
 }
 
@@ -14,6 +16,7 @@ p {
 .nav {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
 }
 
 .btn {
@@ -27,10 +30,6 @@ p {
   align-items: center;
 }
 
-.profile-image {
-  width: 300px;
-  height: 300px;
-}
 
 footer {
   position:fixed;
@@ -39,25 +38,82 @@ footer {
   width:100%;
 }
 
-.hero {
-
+.profile-content h2 {
+  font-size: 2.8rem;
 }
 
-@media (max-width: 767px) {
-  /* main {
-    font-size: .7rem;
+.profile-image {
+  width: 20rem;
+  height: 20rem;
+}
+
+.hero {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: black;
+}
+
+.fa-bars {
+  font-size: 20px;
+}
+
+.fixed-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+}
+
+.hamburger {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+@media (min-width:400px) {
+
+  .profile-image {
+    width: 30rem;
+    height: 30rem;
   }
 
   h1 {
-    font-size: 1.5rem;
-  } */
-
-  .hero {
-    margin-top: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: tomato;
   }
 
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .fixed-header {
+    justify-content: space-between;
+  }
+
+  .nav {
+    flex-direction: row;
+  }
 
 }
+
+@media (min-width:768px) {
+
+  h1 {
+    color: green;
+  }
+
+  .hero {
+
+  }
+}​

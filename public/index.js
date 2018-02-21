@@ -3,4 +3,8 @@ $(document).ready(function() {
 		anchors:['home', 'services', 'references', 'pricing', 'contact'],
     sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', '#4BBFC3', '#7BAABE']
 	});
+
+	$('.hamburger').click(function() {
+		$('.navbar').slideToggle("fast", function() {});
+	});
 });

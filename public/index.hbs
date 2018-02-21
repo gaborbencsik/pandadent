@@ -3,47 +3,58 @@
   <head>
     <meta charset="utf-8">
     <title>{{ data.title.title }}</title>
+    <link rel="icon" href="/dentist.ico?v=1.1">
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css"/>
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="bootstrap-theme.min.css"/>
+    <link rel="stylesheet" type="text/css" href="hover.min.css"/>
     <link rel="stylesheet" type="text/css" href="index.css"/>
     <script src="jquery-3.2.0.js"></script>
     <script type="text/javascript" src="jquery.fullPage.js"></script>
     <script type="text/javascript" src="bootstrap.min.js"></script>
     <script type="text/javascript" src="sheet-to-json.js"></script>
+    <script defer src="fontawesome-all.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
   <body>
     <header>
-      <h1>{{ data.title.title }}</h1>
-      <div class="navbar">
-        <div class="container">
+      <div class="">
+        <div class="fixed-header">
+          <div class="">
+            <h1>{{ data.title.title }}</h1>
+          </div>
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <nav class="menu navbar">
           <nav class="nav">
-            <div class="btn" data-anchor="home">
+            <div class="btn hvr-grow" data-anchor="home">
               <a href="#home">Kezdölap</a>
             </div>
-            <div class="btn" data-anchor="services">
+            <div class="btn hvr-grow" data-anchor="services">
               <a href="#services">Szolgáltatások</a>
             </div>
-            <div class="btn" data-anchor="references">
+            <div class="btn hvr-grow" data-anchor="references">
               <a href="#references">Referenciák</a>
             </div>
-            <div class="btn" data-anchor="pricing">
+            <div class="btn hvr-grow" data-anchor="pricing">
               <a href="#pricing">Árlista</a>
             </div>
-            <div class="btn" data-anchor="contact">
+            <div class="btn hvr-grow" data-anchor="contact">
               <a href="#contact">Elérhetöség</a>
             </div>
           </nav>
-        </div>
+        </nav>
       </div>
+
     </header>
     <div id="fullpage">
     	<div class="section">
         <div class="col-sm-10 col-md-5 col-md-offset-1 hero">
           <img class="profile-image" src="{{data.profile_image.title}}" alt="{{data.name.title}}">
         </div>
-        <div class="col-sm-10 col-md-5">
+        <div class="col-sm-10 col-md-5 profile-content">
           <h2>{{data.name.title}}</h2>
           <p>{{data.name.content}}</p>
         </div>
@@ -64,26 +75,13 @@
       </div>
     	<div class="section">
         <div class="col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1">
+          {{#each images}}
           <div class="slide">
             <div class="box">
-              <img src="{{images.1.content}}" alt="">
+              <img src="{{this.content}}" alt="">
             </div>
           </div>
-          <div class="slide">
-            <div class="box">
-              <img src="{{images.2.content}}" alt="">
-            </div>
-          </div>
-          <div class="slide">
-            <div class="box">
-              <img src="{{images.3.content}}" alt="">
-            </div>
-          </div>
-          <div class="slide">
-            <div class="box">
-              <img src="{{images.4.content}}" alt="">
-            </div>
-          </div>
+          {{/each}}
         </div>
       </div>
       <div class="section">
@@ -116,7 +114,6 @@
     <footer>
       <div class="footer">
         <p>Lábléc</p>
-
       </div>
     </footer>
     <script src="/index.js"></script>
