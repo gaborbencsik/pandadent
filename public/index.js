@@ -10,7 +10,6 @@ $(document).ready(function() {
 	});
 
 	$('.btn.hvr-grow').click(function() {
-		console.log('clicked');
 		$('.navbar').slideToggle("fast", function() {});
 	});
 });

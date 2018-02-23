@@ -139,6 +139,11 @@ h1 {
     flex-direction: row;
   }
 
+  .map {
+    /* width: 20rem; */
+    height: 50rem;
+  }
+
 }
 
 @media (min-width:768px) {
