@@ -27,6 +27,15 @@
             <i class="fas fa-bars"></i>
           </div>
         </div>
+        <!-- <nav class="menu navbar">
+          <ul id="myMenu" class="nav">
+            <li data-menuanchor="home" class="btn hvr-grow"><a href="#home">Kezdölap</a></li>
+            <li data-menuanchor="services" class="btn hvr-grow"><a href="#services">Szolgáltatások</a></li>
+            <li data-menuanchor="references" class="btn hvr-grow"><a href="#references">Referenciák</a></li>
+            <li data-menuanchor="pricing" class="btn hvr-grow"><a href="#pricing">Árlista</a></li>
+            <li data-menuanchor="contact" class="btn hvr-grow"><a href="#contact">Elérhetöség</a></li>
+          </ul>
+        </nav> -->
         <nav class="menu navbar">
           <nav class="nav">
             <div class="btn hvr-grow" data-anchor="home">
@@ -51,16 +60,45 @@
     </header>
     <div id="fullpage">
     	<div class="section">
-        <div class="col-sm-10 col-md-5 col-md-offset-1 hero">
-          <img class="profile-image" src="{{data.profile_image.title}}" alt="{{data.name.title}}">
-        </div>
-        <div class="col-sm-10 col-md-5 profile-content">
-          <h2>{{data.name.title}}</h2>
-          <p>{{data.name.content}}</p>
+        <div class="profile">
+          <div class="col-sm-10 col-md-5 col-md-offset-1 hero">
+            <img class="profile-image" src="{{data.profile_image.title}}" alt="{{data.name.title}}">
+          </div>
+          <div class="col-sm-10 col-md-5 profile-content">
+            <h2>{{data.name.title}}</h2>
+            <p>{{data.name.content}}</p>
+          </div>
         </div>
       </div>
     	<div class="section">
-        <div class="col-sm-10 col-md-5 col-md-offset-1">
+        <div class="services">
+          <h2>Szolgáltások</h2>
+          <div class="col-sm-12">
+            <img class="service-icon" src="tooth_whitening.png" alt="">
+            <span>Fogfehérítés</span>
+          </div>
+          <div class="col-sm-12">
+            <img class="service-icon" src="endodontia.png" alt="">
+            <span>Gyökérkezelés</span>
+          </div>
+          <div class="col-sm-12">
+            <img class="service-icon" src="paedodontics.png" alt="">
+            <span>Gyermekfogászat</span>
+          </div>
+          <div class="col-sm-12">
+            <img class="service-icon" src="prosthetic_dentistry.png" alt="">
+            <span>Fogpótlás</span>
+          </div>
+          <div class="col-sm-12">
+            <img class="service-icon" src="conservative_dentistry.png" alt="">
+            <span>Konzerváló fogászat</span>
+          </div>
+          <div class="col-sm-12">
+            <img class="service-icon" src="wisdom_tooth.png" alt="">
+            <span>Bölcsességfog eltávolítás</span>
+          </div>
+        </div>
+        <!-- <div class="col-sm-10 col-md-5 col-md-offset-1">
           <div class="">
             <h2>{{data.service_1.title}}</h2>
             <p>{{data.service_1.content}}</p>
@@ -71,7 +109,7 @@
             <h2>{{data.service_2.title}}</h2>
             <p>{{data.service_2.content}}</p>
           </div>
-        </div>
+        </div> -->
       </div>
     	<div class="section">
         <div class="col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1">
