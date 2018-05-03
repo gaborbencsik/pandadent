@@ -9,7 +9,6 @@ const engines = require('consolidate');
 const _ = require('lodash');
 
 const key = '1p-cbPPmYaDmHrG2D0rz3ryhwQao4N_oUbLumgwrJdS4';
-const key2 = '1xHYqR8dt1ip3l0qJxyVcXJ9znKHZJ32h3ndYoQ67y2I';
 
 const app = express();
 
@@ -31,8 +30,7 @@ app.get('/', (req, res) => {
     worksheet: ['Content', 'Images']
   })
   .then(function(result) {
-    res.render('index', {data: result[0], images: result[1]});
-  })
+    res.render('index', { data: result[0], images: result[1] }) })
   .catch(function(err) {
     console.log(err.message);
     // res.render('error')
