@@ -6,17 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "start-dev": "nodemon --watch public --ext hbs server.js"
+    "start-dev": "nodemon server.js"
   },
   "author": "bencso",
   "license": "ISC",
   "dependencies": {
     "consolidate": "^0.15.0",
+    "dotenv": "^5.0.1",
+    "email-validator": "^1.1.1",
     "express": "^4.16.2",
+    "express-email-obfuscate": "^1.0.1",
     "google-spreadsheet-to-json": "^1.0.0",
     "handlebars": "^4.0.11",
     "helmet": "^3.11.0",
     "lodash": "^4.17.5",
+    "node-fetch": "^2.1.2",
     "promise": "^8.0.1"
   }
 }

@@ -2,157 +2,41 @@ html {
   font-size: 62.5%;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  /* position: relative; */
-  z-index: 100;
-}
-
-p {
-  text-align: justify;
-}
-
-.nav {
+header, .form {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
-  height: 50rem;
-}
-
-.btn {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-.box, .footer {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 
+textarea {
+  resize: none;
+}
 
-footer {
-  position:fixed;
-  left: 0;
-  bottom: 0;
+h3, label {
+  color: rgb(110, 110, 110);
+}
+
+.error {
+  margin-top: 10px;
   width: 100%;
+  position: relative;
 }
 
-.profile {
-  margin-top: -5rem;
+.modal-body {
+  height: 15rem;
 }
 
-.profile-content h2 {
-  font-size: 2.8rem;
+.btn-primary {
+  background-color: #E64B8B;
+  border-color: #af3b6b;
+  background-image: none;
 }
 
-.profile-content p {
-  font-size: 2rem;
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:active:focus,
+.btn-primary:focus {
+  background-color: #af3b6b;
+  border-color: #af3b6b;
 }
-
-.profile-image {
-  width: 20rem;
-  height: 20rem;
-}
-
-.hero {
-  margin-top: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  color: black;
-}
-
-.fa-bars {
-  font-size: 2rem;
-}
-
-.fixed-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.menu {
-  display: none;
-  background-color: #333;
-}
-
-.menu a {
-  color: #f2f2f2;
-  font-size: 2.5rem;
-  font-weight: 800;
-}
-
-.hamburger {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
-
-.services {
-  padding-top: 5rem;
-  padding-left: 2rem;
-}
-
-.services > div,
-.services h2 {
-  padding-bottom: 2rem;
-}
-
-.services div > span {
-  font-size: 2rem;
-}
-
-.service-icon {
-  width: 5rem;
-}
-
-@media (min-width:400px) {
-
-  .profile-image {
-    width: 30rem;
-    height: 30rem;
-  }
-
-  h1 {
-    color: tomato;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .menu {
-    display: block;
-  }
-
-  .fixed-header {
-    justify-content: space-between;
-  }
-
-  .nav {
-    flex-direction: row;
-  }
-
-  .map {
-    /* width: 20rem; */
-    height: 50rem;
-  }
-
-}
-
-@media (min-width:768px) {
-
-  h1 {
-    color: green;
-  }
-
-  .hero {
-
-  }
-}​
