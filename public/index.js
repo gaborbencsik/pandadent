@@ -43,7 +43,6 @@ class Controller {
 	}
 
 	send() {
-		console.log(this.formData);
 		let data = JSON.stringify(this.formData)
 
 		fetch(`/appointment`, {
@@ -82,7 +81,6 @@ class Controller {
 	}
 
 	showSuccess() {
-		console.log('success');
 		$('#myModal').modal({show: true})
 	}
 
