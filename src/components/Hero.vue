@@ -13,16 +13,10 @@
                   <div class="slider-content">
                     <h1 class="slider-title">{{this.title}}</h1>
                     <p class="slider-text hidden-xs">{{this.motto}}</p>
-                    <!-- <a href="#" class="btn btn-primary btn-sm hidden-sm hidden-xs">
-                      {{this.buttonTexts.appointment}}
-                    </a> -->
                     <div class="hidden-sm hidden-xs">
-                      <!-- <PhoneButton/> -->
+                      <PhoneButton/>
                     </div>
                   </div>
-                  <!-- <div class="hero-image">
-                    <img v-bind:src="this.heroImageUrl" alt="">
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -34,12 +28,12 @@
 </template>
 
 <script>
-// import PhoneButton from './PhoneButton';
+import PhoneButton from './PhoneButton';
 
 export default {
   name: 'Hero',
   components: {
-    // PhoneButton,
+    PhoneButton,
   },
   data() {
     return {

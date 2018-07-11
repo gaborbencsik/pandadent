@@ -17,7 +17,7 @@ import Pricing from './components/Pricing';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Copyright from './components/Copyright';
-import ShowPhoneNumber from './components/ShowPhoneNumber';
+// import ShowPhoneNumber from './components/ShowPhoneNumber';
 
 export default {
   name: 'App',
@@ -31,7 +31,7 @@ export default {
     Testimonials,
     Footer,
     Copyright,
-    ShowPhoneNumber,
+    // ShowPhoneNumber,
   },
 };
 </script>

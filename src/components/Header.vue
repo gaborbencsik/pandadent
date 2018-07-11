@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
-            <a href="index.html"><img v-bind:src="this.logoUrl" alt=""></a>
+            <a href="#app"><img v-bind:src="this.logoUrl" alt=""></a>
           </div>
           <div class="col-lg-9 col-md-10 col-sm-12 col-xs-12">
             <div class="navigation">

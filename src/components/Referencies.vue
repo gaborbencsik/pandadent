@@ -13,6 +13,7 @@
         <div class="carousel-view">
           <button class='carousel-controls__button btn btn-primary screen'
           @click="previous">{{this.buttonArrows.prew}}</button>
+
           <transition-group class='carousel' tag="div">
             <div v-for="slide in imageUrls" class='slide' :key="slide.id">
               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img-wrapper">
@@ -29,9 +30,9 @@
               </div>
             </div>
           </transition-group>
+
           <button class='carousel-controls__button btn btn-primary screen'
           @click="next">{{this.buttonArrows.next}}</button>
-
           <div class='carousel-controls mobile'>
             <button class='carousel-controls__button btn btn-primary'
             @click="previous">{{this.buttonArrows.prew}}</button>
@@ -67,11 +68,12 @@ export default {
         'static/images/after.png',
       ],
       imageUrls: [
-        { before: 'static/images/before.png', after: 'static/images/after.png', id: 1, title: 'elso fogak' },
-        { before: 'static/images/before2.png', after: 'static/images/after2.png', id: 2, title: 'masodik fogak' },
-        { before: 'static/images/before2.png', after: 'static/images/after2.png', id: 3, title: 'harmadik fogak' },
-        { before: 'static/images/before2.png', after: 'static/images/after2.png', id: 4, title: 'negyedik fogak' },
-        { before: 'static/images/before2.png', after: 'static/images/after2.png', id: 5, title: 'ötödik fogak' },
+        { before: 'static/images/before.png', after: 'static/images/after.png', id: 1 },
+        { before: 'static/images/before3.png', after: 'static/images/after3.png', id: 3 },
+        { before: 'static/images/before2.png', after: 'static/images/after2.png', id: 2 },
+        { before: 'static/images/before5.png', after: 'static/images/after5.png', id: 5 },
+        { before: 'static/images/before4.png', after: 'static/images/after4.png', id: 4 },
+        // { before: 'static/images/before6.png', after: 'static/images/after6.png', id: 6 },
       ],
       buttonArrows: {
         prew: '<',
@@ -85,6 +87,7 @@ export default {
     next() {
       const first = this.imageUrls.shift();
       this.imageUrls = this.imageUrls.concat(first);
+      console.log(this.imageUrls[0].id);
     },
     previous() {
       const last = this.imageUrls.pop();

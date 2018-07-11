@@ -23,15 +23,25 @@
 </template>
 
 <script>
+
 export default {
   name: 'ShowPhoneNumber',
   data() {
     return {
-      phoneNumber: '+36 (30) 123-4567',
+      phoneNumber: '',
     };
   },
   methods: {
   },
+  mounted() {
+    fetch('/phone', {
+      method: 'GET',
+    }).then(response => response.json())
+      .then((response) => {
+        this.phoneNumber = response.phone;
+      });
+  },
+
 };
 </script>
 
