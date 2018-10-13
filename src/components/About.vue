@@ -2,7 +2,7 @@
   <div id="about-me" class="space-medium bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 image-wrapper">
           <img v-bind:src="this.aboutImageUrl" alt="" class="img-responsive">
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -36,7 +36,8 @@ export default {
   },
   data() {
     return {
-      aboutImageUrl: 'static/images/about-pic.jpg',
+      // aboutImageUrl: 'static/images/about-pic.jpg',
+      aboutImageUrl: 'static/images/kovacsanna.jpg',
       name: 'Dr. Kovács Anna',
       aboutMe: ['A Pécsi Tudományegyetem fogorvosi szakán végeztem 2016-ban. Fogászat iránti szeretetemet és szenvedélyemet édesanyámtól örököltem, aki szintén fogorvos.', 'Hivatásomnak tekintem a gyermekek dentális higiéniájának a javítását. Anyaként különösen fontosnak tartom, hogy a gyerekekben, felnöttekben a fogászattal szembeni rossz sztereotípiák lerombolását.'],
       preferencies: [
@@ -67,9 +68,24 @@ p {
   color: #ffffff;
 }
 
+.img-responsive {
+  max-width: 70%;
+  border: 1px solid #000000;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media only screen and (max-width:768px) {
   #about-me button.btn {
     font-size: 15px;
+  }
+
+  .img-responsive {
+    max-width: 90%;
   }
 
   .show-mobile {

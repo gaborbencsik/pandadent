@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
-            <a href="#app"><img v-bind:src="this.logoUrl" alt=""></a>
+            <a href="/"><img v-bind:src="this.logoUrl" alt=""></a>
           </div>
           <div class="col-lg-9 col-md-10 col-sm-12 col-xs-12">
             <div class="navigation">
@@ -13,13 +13,13 @@
                   <span>Menu</span>
                 </div>
                 <ul v-if="isMenuVisible">
-                  <li v-for="menuItem in menuItems" v-bind:key="menuItem.content">
+                  <li v-for="menuItem in menu" v-bind:key="menuItem.content">
                     <a v-bind:href="menuItem.href"
                     v-bind:title="menuItem.title">{{menuItem.content}}</a>
                   </li>
                 </ul>
                 <ul class="menu-big-screen" v-else>
-                  <li v-for="menuItem in menuItems" v-bind:key="menuItem.content">
+                  <li v-for="menuItem in menu" v-bind:key="menuItem.content">
                     <a v-bind:href="menuItem.href"
                     v-bind:title="menuItem.title">{{menuItem.content}}</a>
                   </li>
@@ -36,19 +36,12 @@
 <script>
 export default {
   name: 'Header',
+  props: ['menu'],
   data() {
     return {
       phoneNumber: '(000)-123-4567',
       email: 'info@dentalcare.com',
       facebookUrl: '#',
-      menuItems: [
-        { content: 'Kezdölap', title: 'Home', href: '#app' },
-        { content: 'Bemutatkozás', title: 'AboutMe', href: '#about-me' },
-        { content: 'Kezelések', title: 'Treatments', href: '#treatments' },
-        { content: 'Referenciák', title: 'Referencies', href: '#referencies' },
-        { content: 'Árak', title: 'Prices', href: '#prices' },
-        { content: 'Elérhetöség', title: 'Contact', href: '#contact' },
-      ],
       isMenuVisible: false,
       logoUrl: 'static/images/pandadent_logo.png',
     };
@@ -74,6 +67,7 @@ export default {
 
 #navigation.small-screen .menu-big-screen {
   flex-direction: row;
+  text-align: center;
 }
 
 #navigation > ul {

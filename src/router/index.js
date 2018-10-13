@@ -7,7 +7,7 @@ import Main from '@/components/Main';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/kezeles/:treatment',

@@ -1,5 +1,6 @@
 <template>
   <div id="main">
+    <Header :menu="menuItems"/>
     <Hero/>
     <About/>
     <Treatments/>
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+import Header from './Header';
 import Hero from './Hero';
 import About from './About';
 import Treatments from './Treatments';
@@ -24,6 +26,7 @@ import ShowPhoneNumber from './ShowPhoneNumber';
 export default {
   name: 'Main',
   components: {
+    Header,
     Hero,
     About,
     Treatments,
@@ -33,6 +36,17 @@ export default {
     Footer,
     Copyright,
     ShowPhoneNumber,
+  },
+  data() {
+    return {
+      menuItems: [
+        { content: 'Bemutatkozás', title: 'AboutMe', href: '#about-me' },
+        { content: 'Kezelések', title: 'Treatments', href: '#treatments' },
+        { content: 'Referenciák', title: 'Referencies', href: '#referencies' },
+        { content: 'Árlista', title: 'Prices', href: '#prices' },
+        { content: 'Elérhetöség', title: 'Contact', href: '#contact' },
+      ],
+    };
   },
 };
 </script>

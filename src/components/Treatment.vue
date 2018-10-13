@@ -1,16 +1,29 @@
 <template>
-  <div id="treatment" class="space-medium">
+  <div id="treatment" class="">
+    <Header :menu="menuItems"/>
+    <h1>{{ this.title }}</h1>
     <p>{{ $route.params }}</p>
   </div>
 </template>
 
 <script>
+import Header from './Header';
 
 export default {
   name: 'Treatment',
+  components: {
+    Header,
+  },
   data() {
     return {
       title: 'Fogászati kezelések',
+      menuItems: [
+        { content: 'Bemutatkozás', title: 'AboutMe', href: '/' },
+        { content: 'Kezelések', title: 'Treatments', href: '/' },
+        { content: 'Referenciák', title: 'Referencies', href: '/' },
+        { content: 'Árlista', title: 'Prices', href: '/' },
+        { content: 'Elérhetöség', title: 'Contact', href: '/' },
+      ],
     };
   },
   computed: {

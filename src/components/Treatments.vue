@@ -9,17 +9,18 @@
           </div>
         </div>
       </div>
-      <div class="row" v-for="chunk in treatmentsInChunks" v-bind:key="chunk">
-        <div v-for="content in chunk" v-bind:key="content">
+      <div class="row" v-for="chunk in treatmentsInChunks" v-bind:key="chunk.title">
+        <div v-for="content in chunk" v-bind:key="content.title">
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="service-block">
               <div class="service-icon">
                 <i v-bind:class="content.icon"></i> </div>
               <div class="">
-                <h3>
-                  <router-link v-bind:to="'/kezeles'+content.href">{{content.title}}</router-link>
+                <h3>{{content.title}}
+                  <!--<router-link v-bind:to="'/kezeles'+content.href">
+                  {{content.title}}</router-link>-->
                 </h3>
-                <p>{{content.content}}</p>
+                <p v-if="showDetails">{{content.content}}</p>
               </div>
             </div>
           </div>
@@ -38,15 +39,16 @@ export default {
     return {
       title: 'Fogászati kezelések',
       motto: 'Munkám során az alábbi kezelésekkel várom a pácienseket',
+      showDetails: false,
       treatments: [
         {
-          content: 'Proin rutrum metus acted quis tincidunt sempers dummy conetent.',
+          content: 'A rendelöben végzett fogfehérítés nagyjából 1-2 órát vesz igénybe és általálában egy ülésben elvégezhetö',
           title: 'Fogfehérítés',
           href: '/fogfeherites',
           icon: 'icon-036-tooth-4',
         },
         {
-          content: 'Proin rutrum metus acted quis tincidunt sempers dummy conetent.',
+          content: 'A gyökérkezelés célja azon fogak megmentése, melyeknek a gyökere már valamilyen okból elhalt.',
           title: 'Gyökérkezelés',
           href: '/gyokerkezeles',
           icon: 'icon-017-tooth-9',

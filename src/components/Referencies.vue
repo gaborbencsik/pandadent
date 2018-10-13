@@ -44,10 +44,10 @@
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="mt40 text-center">
-            <router-link class="btn btn-primary btn-lg"
+            <!-- <router-link class="btn btn-primary btn-lg"
             v-bind:to="beforeAfterGalleryPath">
               {{buttonText}}
-            </router-link>
+            </router-link> -->
           </div>
         </div>
       </div>
@@ -87,7 +87,6 @@ export default {
     next() {
       const first = this.imageUrls.shift();
       this.imageUrls = this.imageUrls.concat(first);
-      console.log(this.imageUrls[0].id);
     },
     previous() {
       const last = this.imageUrls.pop();
