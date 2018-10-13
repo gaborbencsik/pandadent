@@ -15,7 +15,7 @@
                 <ul v-if="isMenuVisible">
                   <li v-for="menuItem in menu" v-bind:key="menuItem.content">
                     <a v-bind:href="menuItem.href"
-                    v-bind:title="menuItem.title">{{menuItem.content}}</a>
+                    v-bind:title="menuItem.title" @click="showMenu()">{{menuItem.content}}</a>
                   </li>
                 </ul>
                 <ul class="menu-big-screen" v-else>
