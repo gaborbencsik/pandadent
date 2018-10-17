@@ -62,7 +62,8 @@ export default {
   data() {
     return {
       title: 'Referenciák',
-      motto: 'A legnagyobb öröm, amikor a páciens elégedetten, szép, egészséges mosollyal száll ki székböl.',
+      // motto: 'A legnagyobb öröm, amikor a páciens elégedetten, szép, egészséges mosollyal száll ki székböl.',
+      motto: '',
       beforeAfterImageUrls: [
         'static/images/before.png',
         'static/images/after.png',

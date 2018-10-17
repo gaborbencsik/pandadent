@@ -9,10 +9,11 @@
     "start-vue": "npm run dev",
     "cleanup": "rimraf dist",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "webpack": "webpack --progress --colors --watch --config build/webpack.prod.conf.js",
+    "webpack": "webpack --progress --colors --watch --config build/webpack.dev.conf.js",
     "alldev": "npm-run-all --parallel start-dev webpack",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "build:prod": "npm run cleanup && node build/build.js"
   },
   "author": "bencso",
   "license": "ISC",

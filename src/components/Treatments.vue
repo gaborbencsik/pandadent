@@ -17,8 +17,6 @@
                 <i v-bind:class="content.icon"></i> </div>
               <div class="">
                 <h3>{{content.title}}
-                  <!--<router-link v-bind:to="'/kezeles'+content.href">
-                  {{content.title}}</router-link>-->
                 </h3>
                 <p v-if="showDetails">{{content.content}}</p>
               </div>
@@ -38,7 +36,8 @@ export default {
   data() {
     return {
       title: 'Fogászati kezelések',
-      motto: 'Munkám során az alábbi kezelésekkel várom a pácienseket',
+      // motto: 'Munkám során az alábbi kezelésekkel várom a pácienseket',
+      motto: '',
       showDetails: false,
       treatments: [
         {
