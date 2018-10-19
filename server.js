@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(serveStatic(__dirname + "/dist"));
 
 app.get('/phone', (req, res) => {
-  res.status(200).send({phone: '+36-30-123-4567'})
+  res.status(200).send({phone: '+36-30-755-1349'})
 })
 
 const server = app.listen(process.env.PORT || 4516, () => {

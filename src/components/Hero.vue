@@ -39,10 +39,6 @@ export default {
     return {
       title: '"Kis fogak, nagy mosoly."',
       motto: 'Türelmes hozzáállás, biztonságos légkör, prevenció és tanácsadás, esztétikai fogászat, fogfehérítés.',
-      buttonTexts: {
-        appointment: 'Idöpont kérés',
-        about: 'Bemutatkozás',
-      },
       backgroundImageUrl: 'static/images/slider-image3.png',
     };
   },
@@ -60,11 +56,6 @@ div.slider {
 
 .hero-section {
   /* display: flex; */
-}
-
-.hero-image {
-  border: 1px solid black;
-  width: 200px;
 }
 
 .slider-captions {

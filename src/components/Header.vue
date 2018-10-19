@@ -39,9 +39,6 @@ export default {
   props: ['menu'],
   data() {
     return {
-      phoneNumber: '(000)-123-4567',
-      email: 'info@dentalcare.com',
-      facebookUrl: '#',
       isMenuVisible: false,
       logoUrl: 'static/images/pandadent_logo.png',
     };
@@ -134,7 +131,6 @@ export default {
     border-bottom: 1px solid #558396;
     border-left: 1px solid #558396;
     border-right: 1px solid #558396;
-
   }
 }
 

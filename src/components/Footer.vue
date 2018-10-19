@@ -7,7 +7,7 @@
             <p>{{this.heading}}</p>
             <PhoneButton/>
             <div class="footer-social">
-              <a v-bind:href="facebookUrl">
+              <a v-bind:href="facebookUrl" target="_blank">
                 <span>
                   <i class="fa fa-facebook"></i>
                 </span>
@@ -48,8 +48,7 @@ export default {
   },
   data() {
     return {
-      location: 'Székesfehérvár Távirda utca 31-33.',
-      heading: 'Pácienseket minden esetben csak elözetes idöpont egyeztetés után tudom fogadni.',
+      heading: 'Elözetes idöpont egyeztetés szükséges.',
       facebookUrl: 'https://www.facebook.com/drkovacsanna/',
     };
   },

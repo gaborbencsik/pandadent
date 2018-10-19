@@ -62,7 +62,6 @@ export default {
   data() {
     return {
       title: 'Referenciák',
-      // motto: 'A legnagyobb öröm, amikor a páciens elégedetten, szép, egészséges mosollyal száll ki székböl.',
       motto: '',
       beforeAfterImageUrls: [
         'static/images/before.png',
@@ -74,7 +73,6 @@ export default {
         { before: 'static/images/before2.png', after: 'static/images/after2.png', id: 2 },
         { before: 'static/images/before5.png', after: 'static/images/after5.png', id: 5 },
         { before: 'static/images/before4.png', after: 'static/images/after4.png', id: 4 },
-        // { before: 'static/images/before6.png', after: 'static/images/after6.png', id: 6 },
       ],
       buttonArrows: {
         prew: '<',

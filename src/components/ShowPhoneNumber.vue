@@ -32,8 +32,6 @@ export default {
       phoneNumber: '',
     };
   },
-  methods: {
-  },
   mounted() {
     fetch('/phone', {
       method: 'GET',

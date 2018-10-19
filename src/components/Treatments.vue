@@ -36,7 +36,6 @@ export default {
   data() {
     return {
       title: 'Fogászati kezelések',
-      // motto: 'Munkám során az alábbi kezelésekkel várom a pácienseket',
       motto: '',
       showDetails: false,
       treatments: [
