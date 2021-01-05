@@ -18,7 +18,7 @@
   "author": "bencso",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "express": "^4.16.2",
     "helmet": "^3.11.0",
     "lodash": "^4.17.10",
